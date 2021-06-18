@@ -143,6 +143,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Factory.cpp" />
+    <ClCompile Include="FactoryPacmanAsesino.cpp" />
     <ClCompile Include="FactoryPacmanClasico.cpp" />
     <ClCompile Include="FactoryPacmanGalactico.cpp" />
     <ClCompile Include="Fantasma.cpp" />
@@ -159,9 +160,11 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MapGenerator.cpp" />
     <ClCompile Include="Moneda.cpp" />
+    <ClCompile Include="MonedaAsesino.cpp" />
     <ClCompile Include="MonedaClasico.cpp" />
     <ClCompile Include="MonedaGalactico.cpp" />
     <ClCompile Include="Pacman.cpp" />
+    <ClCompile Include="PacmanAsesino.cpp" />
     <ClCompile Include="PacmanClasico.cpp" />
     <ClCompile Include="PacmanGalactico.cpp" />
     <ClCompile Include="Pared.cpp" />
@@ -177,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Factory.h" />
+    <ClInclude Include="FactoryPacmanAsesino.h" />
     <ClInclude Include="FactoryPacmanClasico.h" />
     <ClInclude Include="FactoryPacmanGalactico.h" />
     <ClInclude Include="Fantasma.h" />
@@ -192,10 +196,12 @@
     <ClInclude Include="GamePanel.h" />
     <ClInclude Include="MapGenerator.h" />
     <ClInclude Include="Moneda.h" />
+    <ClInclude Include="MonedaAsesino.h" />
     <ClInclude Include="MonedaClasico.h" />
     <ClInclude Include="MonedaGalactico.h" />
     <ClInclude Include="MoveDirection.h" />
     <ClInclude Include="Pacman.h" />
+    <ClInclude Include="PacmanAsesino.h" />
     <ClInclude Include="PacmanClasico.h" />
     <ClInclude Include="PacmanGalactico.h" />
     <ClInclude Include="Pared.h" />
