@@ -1,5 +1,6 @@
 
 #pragma once
+#include "Pacman.h"
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -15,19 +16,34 @@
 #include "Fruta.h"
 #include "MoveDirection.h"
 #include "TextureManager.h" 
-#include "Pacman.h"
 
+using namespace std;
 
 class PacmanAsesino :
-    public Pacman
+	public Pacman
 {
-    //constructores y destructores
-    PacmanAsesino(Tile* _tile, Texture* _texturaPacmanClasico, int _posicionX, int _posicionY, int _velocidad);
-   // ~PacmanAsesino();
+public:
+	//METODOS 
+
+	//Constructores y destructores
+	PacmanAsesino(Tile* _tile, Texture* _texturaPacmanClasico, int _posicionX, int _posicionY, int _velocidad);
+	~PacmanAsesino();
+
+	static const int Width = 25;
+	static const int Height = 25;
 
 
-    //metodos varios
-    bool tratarDeMover(MoveDirection _direccionNueva);
+	//Metodos accesores
 
+
+
+	// Mark the object to be deleted
+	//void Delete();
+
+
+
+
+	// Metodos varios
+	bool tratarDeMover(MoveDirection _direccionNueva);
 };
 

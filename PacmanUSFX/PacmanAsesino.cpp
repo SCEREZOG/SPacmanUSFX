@@ -3,11 +3,11 @@
 
 #include <stdio.h>
 
-PacmanAsesino::PacmanAsesino(Tile* _tile, Texture* _texturaPacmanClasico, int _posicionX, int _posicionY, int _velocidad) :
-	Pacman(_tile, _texturaPacmanClasico, _posicionX, _posicionY, _velocidad)
+PacmanAsesino::PacmanAsesino(Tile* _tile, Texture* _texturaPacmanGalactico, int _posicionX, int _posicionY, int _velocidad) :
+	Pacman(_tile, _texturaPacmanGalactico, _posicionX, _posicionY, _velocidad)
 {
 	texturaAnimacion = new TextureAnimation();
-	texturaAnimacion->setTexture(_texturaPacmanClasico);
+	texturaAnimacion->setTexture(_texturaPacmanGalactico);
 	texturaAnimacion->addCuadroAnimacion("izquierda", new SDL_Rect({ 0, 0, 25, 25 }));
 	texturaAnimacion->addCuadroAnimacion("izquierda", new SDL_Rect({ 25, 0, 25, 25 }));
 	texturaAnimacion->addCuadroAnimacion("derecha", new SDL_Rect({ 0, 25, 25, 25 }));
@@ -33,13 +33,15 @@ PacmanAsesino::PacmanAsesino(Tile* _tile, Texture* _texturaPacmanClasico, int _p
 	}
 
 
-	
 
 	direccionActual = MOVE_RIGHT;
 	direccionSiguiente = MOVE_RIGHT;
 
 
-	// Inicializa propiedade de de pacman
-	velocidad = _velocidad;
+}
 
+//DESTRUCTOR y deja un espacio libre 
+PacmanAsesino::~PacmanAsesino()
+{
+	//Free();
 }

@@ -8,6 +8,7 @@ class TextureManager
 private:
 	map<string, Texture*> mapTexturas;
 
+	//pacman clasico
 	const string pathPacmanClasico = "Resources/PacMan.bmp";
 	const string pathFantasmaClasico1 = "Resources/Blinky.bmp";
 	const string pathFantasmaClasico2 = "Resources/Clyde.bmp";
@@ -18,6 +19,7 @@ private:
 	const string pathSuperMonedaClasico = "Resources/Monedas03.jpg";
 	const string pathParedClasico = "Resources/WallTextures.png";
 
+	//pacman galactico
 	const string pathPacmanGalactico = "Resources/PacMan.bmp";
 	const string pathFantasmaGalactico1 = "Resources/fantasmaamarillo.bmp ";
 	const string pathFantasmaGalactico2 = "Resources/azul.png ";
@@ -30,6 +32,20 @@ private:
 	const string pathParedGalactico = "Resources/WallTextures.png";
 
 
+	//pacman asesino
+	const string pathPacmanAsesino = "Resources/PacMan.bmp";
+	const string pathFantasmaAsesino1 = "Resources/fantasmaamarillo.bmp ";
+	const string pathFantasmaAsesino2 = "Resources/azul.png ";
+	const string pathFantasmaAsesino3 = "Resources/fantasma.png ";
+	const string pathFantasmaAsesino4 = "Resources/fantasmarojo.bmp ";
+	const string pathFantasmaAsesino5 = "Resources/Pacmanultimo.bmp ";
+	const string pathFrutaAsesino = "Resources/espacial2.png";
+	const string pathMonedaAsesino = "Resources/monedagalactico1.png";
+	const string pathSuperMonedaAsesino = "Resources/Monedas03.jpg";
+	const string pathParedAsesino = "Resources/wall.bmp";
+
+
+	//pacman texture clasico
 	Texture* pacmanClasicoTexture;
 	Texture* fantasmaClasico1Texture;
 	Texture* fantasmaClasico2Texture;
@@ -40,6 +56,7 @@ private:
 	Texture* superMonedaClasicoTexture;
 	Texture* paredClasicoTexture;
 
+	//pacman texture galactico
 	Texture* pacmanGalacticoTexture;
 	Texture* fantasmaGalactico1Texture;
 	Texture* fantasmaGalactico2Texture;
@@ -50,6 +67,20 @@ private:
 	Texture* superMonedaGalacticoTexture;
 	Texture* paredGalacticoTexture;
 	
+
+	//pacman texture asesino
+	Texture* pacmanAsesinoTexture;
+	Texture* fantasmaAsesino1Texture;
+	Texture* fantasmaAsesino2Texture;
+	Texture* fantasmaAsesino3Texture;
+	Texture* fantasmaAsesino4Texture;
+	Texture* frutaAsesinoTexture;
+	Texture* monedaAsesinoTexture;
+	Texture* superMonedaAsesinoTexture;
+	Texture* paredAsesinoTexture;
+
+
+
 public:
 	TextureManager();
 	~TextureManager();
