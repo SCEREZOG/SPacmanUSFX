@@ -31,9 +31,17 @@ bool MapGenerator::load(string path)
 		// Divide la linea leida y la guarda en un vector de caracteres
 		vector<char> chars(line.begin(), line.end());
 
+		// llama la fabrica
+		FrutaFactory::inicializar();
+
 		for (unsigned int x = 0; x < chars.size(); x++) {
 			GameObject* objetoNuevo = nullptr;
+
+			//Fruta clonada
+			Fruta* FrutaClonada = nullptr;
+
 			Tile* tileNuevo = tileGraph->getTileEn(x, y);
+
 
 			// Se verifica que letra es la que se lee y en funcion a ello se crea un tipo de objeto
 			switch (chars[x])
@@ -67,9 +75,15 @@ bool MapGenerator::load(string path)
 				objetoNuevo->setParametrosAnimacion(4);
 				break;
 			case 'q':
-				objetoNuevo = factory->createFrutaInstance(tileNuevo, textureManager, x * 25, y * 25);
+				/*objetoNuevo = factory->createFrutaInstance(tileNuevo, textureManager, x * 25, y * 25);
 				objetoNuevo->setParametrosAnimacion(1);
-				break;
+				break;*/
+
+				objetoNuevo = FrutaFactory::getTipoClasicoFruta();
+				((Fruta*)objetoNuevo)->reconfigurar(tileNuevo, x * 25, y * 25);
+				objetoNuevo->setParametrosAnimacion(1);
+
+
 			}
 
 			// If the object was created, add it to the vector

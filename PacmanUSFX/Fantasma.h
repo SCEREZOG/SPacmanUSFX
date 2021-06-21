@@ -20,7 +20,7 @@ using namespace std;
 class Fantasma : public GameObject {
 protected:
 	//Velocidad en eje X y Y
-	
+
 	//Velocidad a la que mueve el fantasma en cualquier eje
 	int velocidadPatron;
 

@@ -1,7 +1,14 @@
 #include "FrutaClasico.h"
 //using namespace std;
 FrutaClasico::FrutaClasico(Tile* _tile, Texture* _frutaTexture, int _posicionX, int _posicionY):
-	Fruta( _frutaTexture, _posicionX, _posicionY){}
+	Fruta( _frutaTexture, _posicionX, _posicionY){
+	tipoFruta = Fruta_Clasico;
+}
+
+//metodo clonar
+Fruta* FrutaClasico::clonar() {
+	return new FrutaClasico(*this);
+}
 
 
 //void FrutaClasico::update()

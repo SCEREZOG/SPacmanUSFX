@@ -42,7 +42,7 @@ using namespace std;
 Fruta::Fruta(Texture* _frutaTextura, int _posicionX, int _posicionY) :
 	GameObject(_frutaTextura, _posicionX, _posicionY) {
 	// Inicializa propiedade de la fruta
-	tipoFruta = TIPO_FRUTA_GUINDA;
+	//tipoFruta = TIPO_FRUTA_GUINDA;
 
 	ancho = Tile::anchoTile;
 	alto = Tile::altoTile;
@@ -56,6 +56,21 @@ Fruta::Fruta(Texture* _frutaTextura, int _posicionX, int _posicionY) :
 	int numeroFrutaVisible = 0;
 }
 
+void Fruta::reconfigurar(Tile*_tile, int _posicionX, int _posicionY) {
+	// Inicializa propiedade de la fruta
+	//tipoFruta = TIPO_FRUTA_GUINDA;
+
+	ancho = Tile::anchoTile;
+	alto = Tile::altoTile;
+
+	visible = false;
+
+	tiempoVisible = 100;
+	tiempoNoVisible = 150;
+	contadorTiempoVisible = 0;
+	contadorTiempoNoVisible = 0;
+	int numeroFrutaVisible = 0;
+}
 
 void Fruta::update()
 {

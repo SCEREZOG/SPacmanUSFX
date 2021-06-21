@@ -9,6 +9,11 @@ private:
 
 public:
 	FrutaClasico(Tile* _tile, Texture* _frutaTexture, int _posicionX, int _posicionY);
+
+	//clonar
+	Fruta* clonar();
+
+
 	//int getAumentarPuntosVida() { return aumentarPuntosVida; }
 	//int getAumentarVelocidad() { return aumentarVelocidad; }
 

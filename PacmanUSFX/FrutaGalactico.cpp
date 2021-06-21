@@ -3,7 +3,16 @@
 using namespace std;
 
 FrutaGalactico::FrutaGalactico(Tile* _tile, Texture* _frutaTextura, int _posicionX, int _posicionY):
-	Fruta(_frutaTextura, _posicionX, _posicionY){}
+	Fruta(_frutaTextura, _posicionX, _posicionY){
+	tipoFruta = Fruta_Galactico;
+}
+
+
+//metodo clonar
+Fruta* FrutaGalactico::clonar() {
+	return new FrutaGalactico(*this);
+}
+
 
 //void FrutaGalactico::update()
 //{

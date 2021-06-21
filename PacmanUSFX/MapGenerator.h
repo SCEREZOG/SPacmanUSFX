@@ -19,6 +19,7 @@
 #include "FactoryPacmanClasico.h"
 #include "FactoryPacmanGalactico.h"
 #include "Factory.h"
+#include "FrutaFactory.h"
 
 #include "GamePanel.h"
 using namespace std;
@@ -30,6 +31,7 @@ private:
 	TileGraph* tileGraph;
 	TextureManager* textureManager;
 	Factory* factory;
+
 
 	int anchoPantalla;
 	int altoPantalla;

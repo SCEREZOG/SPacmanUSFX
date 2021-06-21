@@ -10,6 +10,9 @@ private:
 public:
     FrutaGalactico(Tile* _tile, Texture* _frutaTextura, int _posicionX, int _posicionY);
 
+    //clonar
+    Fruta* clonar();
+
 /*    int getDisminuirPuntosVida() { return disminuirPuntosVida; }
     int getCongelaMovimiento() { return congelaMovimiento; }
 

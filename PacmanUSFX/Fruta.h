@@ -72,20 +72,19 @@
 
 using namespace std;
 
-enum TIPO_FRUTA {
-	TIPO_FRUTA_GUINDA,
-	TIPO_FRUTA_FRUTILLA,
-	TIPO_FRUTA_NARANJA,
-	TIPO_FRUTA_PLATANO,
-	TIPO_FRUTA_MANZANA,
-	TIPO_FRUTA_MAXIMO
+//prototype
+enum TipoFruta{
+	Fruta_Clasico,
+	Fruta_Galactico,
+	Fruta_Asesino
 };
+
 
 
 class Fruta : public GameObject
 {
-private:
-	TIPO_FRUTA tipoFruta;
+protected:
+	//TIPO_FRUTA tipoFruta;
 
 	int tiempoVisible;
 	int tiempoNoVisible;
@@ -94,18 +93,28 @@ private:
 	int contadorTiempoNoVisible;
 	int numeroFrutaVisible;
 
+	//prototype
+	TipoFruta tipoFruta;
+
+public:
+	//prototype
+	virtual Fruta* clonar() = 0;
+	TipoFruta returnTipoFruta() { return tipoFruta; }
+
 public:
 	//Constructores y destructores
 	Fruta(Texture* _frutaTextura, int _posicionX, int _posicionY);
 	//~Fruta();
 
 	//Metodos accesores
+	void reconfigurar(Tile* _tile, int posicionX, int _posicionY);
 
-	TIPO_FRUTA getTipoFruta() { return tipoFruta; }
+
+	//TIPO_FRUTA getTipoFruta() { return tipoFruta; }
 	int getTiempoVisible() { return tiempoVisible; }
 	int getTiempoNoVisible() { return tiempoNoVisible; }
 
-	void setTipoFruta(TIPO_FRUTA _tipoFruta) { tipoFruta = _tipoFruta; }
+	//void setTipoFruta(TIPO_FRUTA _tipoFruta) { tipoFruta = _tipoFruta; }
 	void setTiempoVisble(int _tiempoVisible) { tiempoVisible = _tiempoVisible; }
 	void setTiempoNoVisble(int _tiempoNoVisible) { tiempoNoVisible = _tiempoNoVisible; }
 
