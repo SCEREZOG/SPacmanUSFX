@@ -9,7 +9,7 @@ GameObject* FactoryPacmanAsesino::createFantasmaInstance(Tile* _tile, TextureMan
 }
 
 GameObject* FactoryPacmanAsesino::createParedInstance(Tile* _tile, TextureManager* _textureManager, int _posicionX, int _posicionY, bool _isElectric) {
-    return new ParedAsesino(_tile, _textureManager->getTexture("pared_asesino"), _posicionX, _posicionY);
+    return new ParedAsesino(_tile, _textureManager->getTexture("pared_asesino"), _posicionX, _posicionY,_isElectric);
 }
 
 GameObject* FactoryPacmanAsesino::createFrutaInstance(Tile* _tile, TextureManager* _textureManager, int _posicionX, int _posicionY) {
