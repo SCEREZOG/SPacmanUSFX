@@ -13,3 +13,4 @@ public:
 	virtual GameObject* createMonedaInstance(Tile* _tile, TextureManager* _texturaManager, int _posicionX, int _posicionY) = 0;
 };
 
+//sss
