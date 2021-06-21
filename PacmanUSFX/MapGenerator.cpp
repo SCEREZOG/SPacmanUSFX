@@ -66,6 +66,10 @@ bool MapGenerator::load(string path)
 				objetoNuevo = factory->createFantasmaInstance(tileNuevo, textureManager, x * 25, y * 25, 3);
 				objetoNuevo->setParametrosAnimacion(4);
 				break;
+			case 'q':
+				objetoNuevo = factory->createFrutaInstance(tileNuevo, textureManager, x * 25, y * 25);
+				objetoNuevo->setParametrosAnimacion(1);
+				break;
 			}
 
 			// If the object was created, add it to the vector

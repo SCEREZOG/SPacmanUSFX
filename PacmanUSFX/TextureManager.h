@@ -39,7 +39,7 @@ private:
 	const string pathFantasmaAsesino3 = "Resources/fantasma.png ";
 	const string pathFantasmaAsesino4 = "Resources/fantasmarojo.bmp ";
 	const string pathFantasmaAsesino5 = "Resources/Pacmanultimo.bmp ";
-	const string pathFrutaAsesino = "Resources/espacial2.png";
+	const string pathFrutaAsesino = "Resources/fruta01.png";
 	const string pathMonedaAsesino = "Resources/monedagalactico1.png";
 	const string pathSuperMonedaAsesino = "Resources/Monedas03.jpg";
 	const string pathParedAsesino = "Resources/wall.bmp";

@@ -9,7 +9,7 @@ xxxxx..........xxxxx
 ......x      x......
 xxxxx.xabcd  x.xxxxx
 xxxxx.xxxxxxxx.xxxxx
-x..................x
+x..........q.......x
 x.xxxxxxxxxxxxxxxx.x
 x........p.........x
 xxxxxxxxxxxxxxxxxxxx
