@@ -65,6 +65,19 @@ void Pacman::update()
 			tileSiguiente->getMoneda()->deleteGameObject();
 		}
 	}
+
+	if (tileActual != nullptr && tileActual->getSuperMoneda() != nullptr) {
+		SDL_Rect* eatingHole = new SDL_Rect({
+			posicionX /*+ Point::Margin*/,
+			posicionY /*+ Point::Margin*/,
+			ancho,
+			alto,
+			});
+
+		if (revisarColision(eatingHole, tileSiguiente->getSuperMoneda()->getColisionador())) {
+			tileSiguiente->getSuperMoneda()->deleteGameObject();
+		}
+	}
 	//fruta
 	if (tileActual != nullptr && tileActual->getFruta() != nullptr) {
 		SDL_Rect* eatingHole = new SDL_Rect({

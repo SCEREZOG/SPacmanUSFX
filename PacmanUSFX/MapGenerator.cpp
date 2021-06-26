@@ -50,6 +50,11 @@ bool MapGenerator::load(string path)
 				objetoNuevo = factory->createMonedaInstance(tileNuevo, textureManager);
 				((GameActor*)objetoNuevo)->setFramesDireccion(4);
 				break;
+			case 'C':
+				objetoNuevo = factory->createSuperMonedaInstance(tileNuevo, textureManager);
+				((GameActor*)objetoNuevo)->setFramesDireccion(4);
+				break;
+
 
 			case 'f':
 				objetoNuevo = factory->createFrutaInstance(tileNuevo, textureManager);
@@ -68,49 +73,33 @@ bool MapGenerator::load(string path)
 			//	break;
 						
 			case 'a':
-				objetoNuevo = factory->createFantasmaInstance(tileNuevo, textureManager);
+				objetoNuevo = factory->createFantasmaInstance1(tileNuevo, textureManager);
+				((GameActor*)objetoNuevo)->setFramesAnimacion(textureManager->getFramesAnimacion("fantasma_clasico"));
+				((GameActor*)objetoNuevo)->setFramesDireccion(2);
+				((GameActor*)objetoNuevo)->setVelocidad(1);
+				break;
+
+			case 'e':
+				objetoNuevo = factory->createFantasmaInstance2(tileNuevo, textureManager);
 				((GameActor*)objetoNuevo)->setFramesAnimacion(textureManager->getFramesAnimacion("fantasma_clasico"));
 				((GameActor*)objetoNuevo)->setFramesDireccion(2);
 				((GameActor*)objetoNuevo)->setVelocidad(2);
-
-				/*
-				objetoNuevo = FantasmasFactory::getTipoClasicoBlinky();
-				((Fantasma*)objetoNuevo)->reconfigurar(tileNuevo, x * 25, y * 25, 5);
-				objetoNuevo->setFramesDireccion(4);
-				*/
-
-				/*objetoNuevo = factory->createFantasmaInstance(tileNuevo, textureManager, x * 25, y * 25, 1);
-				objetoNuevo->setFramesDireccion(4);
-				objetoFantasmaClonado = ((Fantasma*)objetoNuevo)->clone();
-				if (objetoFantasmaClonado != nullptr) {
-					objetoFantasmaClonado->setVelocidadPatron(4);
-					cout << "Se ha clonado satisfactoriamente el fantasma 1" << endl;
-					vectorObjetosJuego.push_back(objetoFantasmaClonado);
-				}
-				objetoFantasmaClonado = ((Fantasma*)objetoNuevo)->clone();
-				if (objetoFantasmaClonado != nullptr) {
-					objetoFantasmaClonado->setVelocidadPatron(5);
-					cout << "Se ha clonado satisfactoriamente el fantasma 1" << endl;
-					vectorObjetosJuego.push_back(objetoFantasmaClonado);
-				}*/
 				break;
-/*			case 'b':
-				objetoNuevo = factory->createFantasmaInstance(tileNuevo, textureManager);
+			case 'i':
+				objetoNuevo = factory->createFantasmaInstance3(tileNuevo, textureManager);
 				((GameActor*)objetoNuevo)->setFramesAnimacion(textureManager->getFramesAnimacion("fantasma_clasico"));
 				((GameActor*)objetoNuevo)->setFramesDireccion(2);
-				((GameActor*)objetoNuevo)->setVelocidad(2)*/;
+				((GameActor*)objetoNuevo)->setVelocidad(3);
+				break;
+			case 'o':
+				objetoNuevo = factory->createFantasmaInstance4(tileNuevo, textureManager);
+				((GameActor*)objetoNuevo)->setFramesAnimacion(textureManager->getFramesAnimacion("fantasma_clasico"));
+				((GameActor*)objetoNuevo)->setFramesDireccion(2);
+				((GameActor*)objetoNuevo)->setVelocidad(4);
+				break;
 
-				/*objetoNuevo = factory->createFantasmaInstance(tileNuevo, textureManager, x * 25, y * 25, 2);
-				objetoNuevo->setFramesDireccion(4);*/
-				//break;
-			case 'c':
-				/*objetoNuevo = factory->createFantasmaInstance(tileNuevo, textureManager, x * 25, y * 25, 2);
-				objetoNuevo->setFramesDireccion(4);*/
-				break;
-			case 'd':
-				/*objetoNuevo = factory->createFantasmaInstance(tileNuevo, textureManager, x * 25, y * 25, 3);
-				objetoNuevo->setFramesDireccion(4);*/
-				break;
+			
+			
 			}
 
 			// If the object was created, add it to the vector

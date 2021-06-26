@@ -4,8 +4,17 @@ GameObject* FactoryPacmanGalactico::createPacmanInstance(Tile* _tile, TextureMan
     return new PacmanGalactico(_tile, _textureManager->getTextura("pacman_galactico"));
 }
 
-GameObject* FactoryPacmanGalactico::createFantasmaInstance(Tile* _tile, TextureManager* _textureManager) {
+GameObject* FactoryPacmanGalactico::createFantasmaInstance1(Tile* _tile, TextureManager* _textureManager) {
     return new FantasmaGalactico(_tile, _textureManager->getTextura("fantasma_galactico1"));
+}
+GameObject* FactoryPacmanGalactico::createFantasmaInstance2(Tile* _tile, TextureManager* _textureManager) {
+    return new FantasmaGalactico(_tile, _textureManager->getTextura("fantasma_galactico2"));
+}
+GameObject* FactoryPacmanGalactico::createFantasmaInstance3(Tile* _tile, TextureManager* _textureManager) {
+    return new FantasmaGalactico(_tile, _textureManager->getTextura("fantasma_galactico3"));
+}
+GameObject* FactoryPacmanGalactico::createFantasmaInstance4(Tile* _tile, TextureManager* _textureManager) {
+    return new FantasmaGalactico(_tile, _textureManager->getTextura("fantasma_galactico4"));
 }
 
 GameObject* FactoryPacmanGalactico::createParedInstance(Tile* _tile, TextureManager* _textureManager) {
@@ -18,4 +27,8 @@ GameObject* FactoryPacmanGalactico::createFrutaInstance(Tile* _tile, TextureMana
 
 GameObject* FactoryPacmanGalactico::createMonedaInstance(Tile* _tile, TextureManager* _textureManager) {
     return new MonedaGalactico(_tile, _textureManager->getTextura("moneda_galactico"));
+}
+
+GameObject* FactoryPacmanGalactico::createSuperMonedaInstance(Tile* _tile, TextureManager* _textureManager) {
+    return new SuperMonedaGalactico(_tile, _textureManager->getTextura("supermoneda_galactico"));
 }

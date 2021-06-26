@@ -6,5 +6,6 @@ enum GameObjectType {
 	FRUTA,
 	PARED,
 	MONEDA,
-	PANEL
+	PANEL,
+	SUPERMONEDA
 };

@@ -13,6 +13,7 @@
 #include "Moneda.h"
 #include "Fruta.h"
 #include "GamePawnControllerKey1.h"
+#include "SuperMoneda.h"
 
 using namespace std;
 

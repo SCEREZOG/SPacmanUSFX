@@ -27,8 +27,8 @@ private:
 	const string pathFantasmaGalactico3 = "Resources/fantasma.png ";
 	const string pathFantasmaGalactico4 = "Resources/fantasmarojo.bmp ";
 	const string pathFrutaGalactico = "Resources/espacial2.png";
-	const string pathMonedaGalactico = "Resources/monedagalactico1.png";
-	const string pathSuperMonedaGalactico = "Resources/Monedas03.jpg";
+	const string pathMonedaGalactico = "Resources/moneda galactico.jpg";
+	const string pathSuperMonedaGalactico = "Resources/super moneda galactico.jpg";
 	const string pathParedGalactico = "Resources/WallTextures.png";
 
 	Texture* pacmanClasicoTexture;
