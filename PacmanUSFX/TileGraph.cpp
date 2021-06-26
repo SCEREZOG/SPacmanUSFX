@@ -68,6 +68,12 @@ Tile* TileGraph::getTileEn(int _x, int _y)
 	return vectorTilesGraph[indice];
 }
 
+array<Tile*, 4> TileGraph::GetNeighbours(Tile* _tile)
+{
+	return get4Vecinos(_tile);
+}
+
+
 array<Tile*, 4> TileGraph::get4Vecinos(Tile* _tile)
 {
 	array<Tile*, 4> vecinos;

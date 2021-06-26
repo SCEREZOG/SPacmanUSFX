@@ -7,19 +7,18 @@
 
 using namespace std;
 
-class TextureAnimation
+//AnimationFrames
+
+class AnimationFrames
 {	
 private:
-	Texture* texturaAnimacion;
 	map<string, vector<SDL_Rect*>> mapCuadrosAnimacion;
 public:
-	TextureAnimation() {};
-	~TextureAnimation() {};
+	AnimationFrames() {};
+	~AnimationFrames() {};
 
-	Texture* getTexture() { return texturaAnimacion; }
 	vector<SDL_Rect*> getCuadrosAnimacion(string _key) { return mapCuadrosAnimacion[_key]; }
 
-	void setTexture(Texture* _textura) { texturaAnimacion = _textura; }
 	void setCuadrosAnimacion(string _key, vector<SDL_Rect*> _vectorCuadrosAnimacion) {
 		mapCuadrosAnimacion[_key] = _vectorCuadrosAnimacion;
 	}

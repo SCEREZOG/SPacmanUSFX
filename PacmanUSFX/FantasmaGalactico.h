@@ -3,20 +3,21 @@
 class FantasmaGalactico :
     public Fantasma
 {
-private:
+protected:
 
     Tile* tileActual;
 
     Tile* tileSiguiente;
-
+    
 
 public:
 
-    FantasmaGalactico(Tile* _tile, Texture* _fantasmaGalacticoTextura, int _posicionX, int _posicionY, int _velocidadPatron);
+    FantasmaGalactico(Tile* _tile, Texture* _fantasmaGalacticoTextura);
     Tile* getTile() { return tileActual; }
     Tile* getTileSiguiente() { return tileSiguiente; }
     void setTile(Tile* _tileNuevo);
     void setTileSiguiente(Tile* _tileNuevoSiguiente) { tileSiguiente = _tileNuevoSiguiente; }
 
-    void update() override;
+ 
+    Fantasma* clone();
 };

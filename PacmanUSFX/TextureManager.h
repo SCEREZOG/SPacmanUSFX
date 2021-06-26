@@ -1,14 +1,15 @@
 #pragma once
 #include<map>
 #include "Texture.h"
+#include "AnimationFrames.h"
 using namespace std;
 
 class TextureManager
 {
 private:
 	map<string, Texture*> mapTexturas;
+	map<string, AnimationFrames*> mapFramesAnimaciones;
 
-	//pacman clasico
 	const string pathPacmanClasico = "Resources/PacMan.bmp";
 	const string pathFantasmaClasico1 = "Resources/Blinky.bmp";
 	const string pathFantasmaClasico2 = "Resources/Clyde.bmp";
@@ -17,35 +18,19 @@ private:
 	const string pathFrutaClasico = "Resources/Frutas.png";
 	const string pathMonedaClasico = "Resources/Monedas02.jpg";
 	const string pathSuperMonedaClasico = "Resources/Monedas03.jpg";
-	const string pathParedClasico = "Resources/WallTextures.png";
+	const string pathParedClasico = "Resources/wall.bmp";
+	const string pathParedClasicoAdapter = "Resources/wall_sprite.bmp";
 
-	//pacman galactico
 	const string pathPacmanGalactico = "Resources/PacMan.bmp";
 	const string pathFantasmaGalactico1 = "Resources/fantasmaamarillo.bmp ";
 	const string pathFantasmaGalactico2 = "Resources/azul.png ";
 	const string pathFantasmaGalactico3 = "Resources/fantasma.png ";
 	const string pathFantasmaGalactico4 = "Resources/fantasmarojo.bmp ";
-	const string pathFantasmaGalactico5 = "Resources/Pacmanultimo.bmp ";
 	const string pathFrutaGalactico = "Resources/espacial2.png";
 	const string pathMonedaGalactico = "Resources/monedagalactico1.png";
 	const string pathSuperMonedaGalactico = "Resources/Monedas03.jpg";
 	const string pathParedGalactico = "Resources/WallTextures.png";
 
-
-	//pacman asesino
-	const string pathPacmanAsesino = "Resources/PacMan.bmp";
-	const string pathFantasmaAsesino1 = "Resources/fantasmaamarillo.bmp ";
-	const string pathFantasmaAsesino2 = "Resources/azul.png ";
-	const string pathFantasmaAsesino3 = "Resources/fantasma.png ";
-	const string pathFantasmaAsesino4 = "Resources/fantasmarojo.bmp ";
-	const string pathFantasmaAsesino5 = "Resources/Pacmanultimo.bmp ";
-	const string pathFrutaAsesino = "Resources/fruta01.png";
-	const string pathMonedaAsesino = "Resources/monedagalactico1.png";
-	const string pathSuperMonedaAsesino = "Resources/Monedas03.jpg";
-	const string pathParedAsesino = "Resources/wall.bmp";
-
-
-	//pacman texture clasico
 	Texture* pacmanClasicoTexture;
 	Texture* fantasmaClasico1Texture;
 	Texture* fantasmaClasico2Texture;
@@ -55,8 +40,8 @@ private:
 	Texture* monedaClasicoTexture;
 	Texture* superMonedaClasicoTexture;
 	Texture* paredClasicoTexture;
+	Texture* paredClasicoAdapterTexture;
 
-	//pacman texture galactico
 	Texture* pacmanGalacticoTexture;
 	Texture* fantasmaGalactico1Texture;
 	Texture* fantasmaGalactico2Texture;
@@ -67,28 +52,18 @@ private:
 	Texture* superMonedaGalacticoTexture;
 	Texture* paredGalacticoTexture;
 	
-
-	//pacman texture asesino
-	Texture* pacmanAsesinoTexture;
-	Texture* fantasmaAsesino1Texture;
-	Texture* fantasmaAsesino2Texture;
-	Texture* fantasmaAsesino3Texture;
-	Texture* fantasmaAsesino4Texture;
-	Texture* frutaAsesinoTexture;
-	Texture* monedaAsesinoTexture;
-	Texture* superMonedaAsesinoTexture;
-	Texture* paredAsesinoTexture;
-
-
+	AnimationFrames* framesAnimacionPacmanClasico;
+	AnimationFrames* framesAnimacionFantasmaClasico;
 
 public:
 	TextureManager();
 	~TextureManager();
 
-	Texture* getTexture(string _key) { return mapTexturas[_key]; }
-	void addTexture(string _key, Texture* _texture);
+	Texture* getTextura(string _key) { return mapTexturas[_key]; }
+	AnimationFrames* getFramesAnimacion(string _key) { return mapFramesAnimaciones[_key]; }
+
+	void addTextura(string _key, Texture* _textura);
+	void addFramesAnimacion(string _key, AnimationFrames* _framesAnimacion);
 	void free();
-
-
 };
 

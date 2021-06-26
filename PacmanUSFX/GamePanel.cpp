@@ -7,7 +7,7 @@ GamePanel::GamePanel(Texture* _texturaGamePanel, int _posicionX, int _posicionY)
 
 void GamePanel::render()
 {
-	TTF_Font* fuente = TTF_OpenFont("LanterosySansSerifFont", 15);
+	TTF_Font* fuente = TTF_OpenFont("BarlowCondensed-Bold.ttf", 15);
 	SDL_Color colorFuente = { 155, 25, 255 };
 	textura->loadFromRenderedText(fuente, texto, colorFuente);
 	SDL_Rect* cuadroTexto = new SDL_Rect({ 0, 0, textura->getAncho(), textura->getAlto() });

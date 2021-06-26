@@ -225,7 +225,7 @@ void Pacman::render()
 		break;
 	}
 
-	texturaAnimacion->getTexture()->render(getPosicionX(), getPosicionY(), cuadroAnimacion);
+	texturaAnimacion->getTextura()->render(getPosicionX(), getPosicionY(), cuadroAnimacion);
 }
 
 void Pacman::deleteGameObject()

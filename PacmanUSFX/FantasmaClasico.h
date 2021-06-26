@@ -4,21 +4,22 @@ class FantasmaClasico :
     public Fantasma
 {
 
-private:
+protected:
 
-    Tile* tileActual;
-    Tile* tileSiguiente;
-
+    /*Tile* tileActual;
+    Tile* tileSiguiente;*/
 
 public:
 
-    FantasmaClasico(Tile* _tile, Texture* _fantasmaClasicoTextura, int _posicionX, int _posicionY, int _velocidadPatron);
-    Tile* getTile() { return tileActual; }
-    Tile* getTileSiguiente() { return tileSiguiente; }
-    void setTile(Tile* _tileNuevo);
-    void setTileSiguiente(Tile* _tileNuevoSiguiente) { tileSiguiente = _tileNuevoSiguiente; }
+    FantasmaClasico(Tile* _tile, Texture* _fantasmaClasicoTextura);
+    /*Tile* getTile() { return tileActual; }
+    Tile* getTileSiguiente() { return tileSiguiente; }*/
+    //void setTile(Tile* _tileNuevo);
+    //void setTileSiguiente(Tile* _tileNuevoSiguiente) { tileSiguiente = _tileNuevoSiguiente; }
+
 
     
+    Fantasma* clone();
 
 };
 

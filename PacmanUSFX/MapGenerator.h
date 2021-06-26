@@ -10,18 +10,18 @@
 #include "Moneda.h"
 #include "Fantasma.h"
 #include "Pacman.h"
+#include "MsPacman.h"
 #include "Fruta.h"
 #include "Pared.h"
 #include "Tile.h"
 #include "TileGraph.h"
 #include "TextureManager.h"
-#include "TextureAnimation.h"
 #include "FactoryPacmanClasico.h"
 #include "FactoryPacmanGalactico.h"
 #include "Factory.h"
-#include "FrutaFactory.h"
+//#include "FantasmasFactory.h"
 
-#include "GamePanel.h"
+//#include "GamePanel.h"
 using namespace std;
 
 class MapGenerator
@@ -32,11 +32,11 @@ private:
 	TextureManager* textureManager;
 	Factory* factory;
 
-
 	int anchoPantalla;
 	int altoPantalla;
 public:
 	MapGenerator(TileGraph* _tileGraph, TextureManager* _textureManager, int _anchoPantalla, int _altoPantalla, Factory* fabrica);
+	//MapGenerator(TileGraph* _tileGraph, TextureManager* _textureManager, int _anchoPantalla, int _altoPantalla);
 
 	// carga el archivo con el mapa del nivel y todos los objetos
 	bool load(string path);

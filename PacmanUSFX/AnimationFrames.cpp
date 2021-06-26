@@ -1,6 +1,6 @@
-#include "TextureAnimation.h"
+#include "AnimationFrames.h"
 
-void TextureAnimation::addCuadroAnimacion(string _key, SDL_Rect* _cuadroAnimacion)
+void AnimationFrames::addCuadroAnimacion(string _key, SDL_Rect* _cuadroAnimacion)
 {
 	auto emca = mapCuadrosAnimacion.find(_key);
 

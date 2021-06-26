@@ -1,8 +1,8 @@
 #include "FantasmaAsesino.h"
 
-FantasmaAsesino::FantasmaAsesino(Tile* _tile, Texture* _fantasmaAsesinoTextura, int _posicionX, int _posicionY, int _velocidadPatron) :
+FantasmaAsesino::FantasmaAsesino(Tile* _tile, Texture* _fantasmaAsesinoTextura, int _posicionX, int _posicionY, int _velocidad) :
 	
-	Fantasma(_tile, _fantasmaAsesinoTextura, _posicionX, _posicionY,  _velocidadPatron)
+	Fantasma(_tile, _fantasmaAsesinoTextura, _posicionX, _posicionY,  _velocidad)
 
 
 {
@@ -81,16 +81,16 @@ void FantasmaAsesino::update()
 		switch (direccionActual)
 		{
 		case MOVE_UP:
-			posicionY = std::max(posicionY - velocidadPatron, tileSiguiente->getPosicionY() * Tile::altoTile);
+			posicionY = std::max(posicionY - velocidad, tileSiguiente->getPosicionY() * Tile::altoTile);
 			break;
 		case MOVE_DOWN:
-			posicionY = std::min(posicionY + velocidadPatron, tileSiguiente->getPosicionY() * Tile::altoTile);
+			posicionY = std::min(posicionY + velocidad, tileSiguiente->getPosicionY() * Tile::altoTile);
 			break;
 		case MOVE_LEFT:
-			posicionX = std::max(posicionX - velocidadPatron, tileSiguiente->getPosicionX() * Tile::anchoTile);
+			posicionX = std::max(posicionX - velocidad, tileSiguiente->getPosicionX() * Tile::anchoTile);
 			break;
 		case MOVE_RIGHT:
-			posicionX = std::min(posicionX + velocidadPatron, tileSiguiente->getPosicionX() * Tile::anchoTile);
+			posicionX = std::min(posicionX + velocidad, tileSiguiente->getPosicionX() * Tile::anchoTile);
 			break;
 		}
 
