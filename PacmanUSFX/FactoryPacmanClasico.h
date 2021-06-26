@@ -1,6 +1,8 @@
 #pragma once
 #include "Factory.h"
 #include "PacmanClasico.h"
+#include "MsPAcmanClasico.h"
+
 #include "FantasmaClasico.h"
 #include "FrutaClasico.h"
 #include "ParedClasico.h"
@@ -13,6 +15,7 @@ class FactoryPacmanClasico :
 {
 public:
     GameObject* createPacmanInstance(Tile* _tile, TextureManager* _textureManager) override;
+    GameObject* createMsPacmanInstance(Tile* _tile, TextureManager* _textureManager) override;
     GameObject* createFantasmaInstance1(Tile* _tile, TextureManager* _textureManager) override;
     GameObject* createFantasmaInstance2(Tile* _tile, TextureManager* _textureManager) override;
     GameObject* createFantasmaInstance3(Tile* _tile, TextureManager* _textureManager) override;

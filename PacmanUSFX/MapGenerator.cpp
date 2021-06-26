@@ -66,11 +66,11 @@ bool MapGenerator::load(string path)
 				((GameActor*)objetoNuevo)->setFramesDireccion(2);
 
 				break;
-			//case 'm':
-			//	objetoNuevo = new MsPacman(tileNuevo, textureManager->getTextura("pacman_clasico"));
-			//	((GameActor*)objetoNuevo)->setFramesAnimacion(textureManager->getFramesAnimacion("pacman_clasico"));
-			//	((GameActor*)objetoNuevo)->setFramesDireccion(2);
-			//	break;
+			case 'm':
+				objetoNuevo = factory->createMsPacmanInstance(tileNuevo, textureManager);
+				((GameActor*)objetoNuevo)->setFramesAnimacion(textureManager->getFramesAnimacion("pacman_clasico"));
+				((GameActor*)objetoNuevo)->setFramesDireccion(2);
+				break;
 						
 			case 'a':
 				objetoNuevo = factory->createFantasmaInstance1(tileNuevo, textureManager);

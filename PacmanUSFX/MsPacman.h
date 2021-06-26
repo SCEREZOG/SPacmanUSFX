@@ -1,6 +1,6 @@
 #pragma once
 #include "Pacman.h"
-#include "GamePawnControllerKey2.h"
+#include "GamePawControllerKey3.h"
 
 class MsPacman :
     public Pacman

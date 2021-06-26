@@ -11,6 +11,9 @@ private:
 	map<string, AnimationFrames*> mapFramesAnimaciones;
 
 	const string pathPacmanClasico = "Resources/PacMan.bmp";
+	const string pathMsPacmanClasico = "Resources/msPacMan.bmp";
+
+
 	const string pathFantasmaClasico1 = "Resources/Blinky.bmp";
 	const string pathFantasmaClasico2 = "Resources/Clyde.bmp";
 	const string pathFantasmaClasico3 = "Resources/Inkey.bmp";
@@ -22,6 +25,8 @@ private:
 	const string pathParedClasicoAdapter = "Resources/wall_sprite.bmp";
 
 	const string pathPacmanGalactico = "Resources/PacMan.bmp";
+	const string pathMsPacmanGalactico = "Resources/msPacMan.bmp";
+
 	const string pathFantasmaGalactico1 = "Resources/fantasmaamarillo.bmp ";
 	const string pathFantasmaGalactico2 = "Resources/azul.png ";
 	const string pathFantasmaGalactico3 = "Resources/fantasma.png ";
@@ -32,6 +37,8 @@ private:
 	const string pathParedGalactico = "Resources/WallTextures.png";
 
 	Texture* pacmanClasicoTexture;
+	Texture* mspacmanClasicoTexture;
+
 	Texture* fantasmaClasico1Texture;
 	Texture* fantasmaClasico2Texture;
 	Texture* fantasmaClasico3Texture;
@@ -43,6 +50,7 @@ private:
 	Texture* paredClasicoAdapterTexture;
 
 	Texture* pacmanGalacticoTexture;
+	Texture* mspacmanGalacticoTexture;
 	Texture* fantasmaGalactico1Texture;
 	Texture* fantasmaGalactico2Texture;
 	Texture* fantasmaGalactico3Texture;

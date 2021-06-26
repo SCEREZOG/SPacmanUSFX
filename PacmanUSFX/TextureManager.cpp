@@ -4,9 +4,13 @@ TextureManager::TextureManager()
 {
 	// Texturas
 
+	//clasico
 	pacmanClasicoTexture = new Texture();
 	pacmanClasicoTexture->loadFromImage(pathPacmanClasico);
 	addTextura("pacman_clasico", pacmanClasicoTexture);
+	mspacmanClasicoTexture = new Texture();
+	mspacmanClasicoTexture->loadFromImage(pathMsPacmanClasico);
+	addTextura("mspacman_clasico", mspacmanClasicoTexture);
 	
 	fantasmaClasico1Texture = new Texture();
 	fantasmaClasico1Texture->loadFromImage(pathFantasmaClasico1);
@@ -41,9 +45,13 @@ TextureManager::TextureManager()
 	paredClasicoAdapterTexture->loadFromImage(pathParedClasicoAdapter);
 	addTextura("pared_clasico_adapter", paredClasicoAdapterTexture);
 
+	//galactico
 	pacmanGalacticoTexture = new Texture();
 	pacmanGalacticoTexture->loadFromImage(pathPacmanGalactico);
 	addTextura("pacman_galactico", pacmanGalacticoTexture);
+	mspacmanGalacticoTexture = new Texture();
+	mspacmanGalacticoTexture->loadFromImage(pathMsPacmanGalactico);
+	addTextura("mspacman_galactico", mspacmanGalacticoTexture);
 
 	fantasmaGalactico1Texture = new Texture();
 	fantasmaGalactico1Texture->loadFromImage(pathFantasmaGalactico1);

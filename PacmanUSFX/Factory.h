@@ -7,6 +7,9 @@ class Factory
 {
 public:
 	virtual GameObject* createPacmanInstance(Tile* _tile, TextureManager* _texturaManager) = 0;
+	virtual GameObject* createMsPacmanInstance(Tile* _tile, TextureManager* _texturaManager) = 0;
+
+
 	virtual GameObject* createFantasmaInstance1(Tile* _tile, TextureManager* _texturaManager) = 0;
 	virtual GameObject* createFantasmaInstance2(Tile* _tile, TextureManager* _texturaManager) = 0;
 	virtual GameObject* createFantasmaInstance3(Tile* _tile, TextureManager* _texturaManager) = 0;

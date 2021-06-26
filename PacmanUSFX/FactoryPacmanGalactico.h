@@ -1,6 +1,7 @@
 #pragma once
 #include "Factory.h"
 #include "PacmanGalactico.h"
+#include "MsPAcmanGalactico.h"
 #include "FantasmaGalactico.h"
 #include "ParedGalactico.h"
 #include "FrutaGalactico.h"
@@ -13,6 +14,8 @@ class FactoryPacmanGalactico :
 {
 public:
     GameObject* createPacmanInstance(Tile* _tile, TextureManager* _textureManager) override;
+    GameObject* createMsPacmanInstance(Tile* _tile, TextureManager* _textureManager) override;
+
     GameObject* createFantasmaInstance1(Tile* _tile, TextureManager* _textureManager) override;
     GameObject* createFantasmaInstance2(Tile* _tile, TextureManager* _textureManager) override;
     GameObject* createFantasmaInstance3(Tile* _tile, TextureManager* _textureManager) override;

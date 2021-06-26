@@ -146,6 +146,7 @@
     <ClCompile Include="Factory.cpp" />
     <ClCompile Include="FactoryPacmanClasico.cpp" />
     <ClCompile Include="FactoryPacmanGalactico.cpp" />
+    <ClCompile Include="FactoryPacmanHard.cpp" />
     <ClCompile Include="Fantasma.cpp" />
     <ClCompile Include="FantasmaClasico.cpp" />
     <ClCompile Include="FantasmaGalactico.cpp" />
@@ -155,6 +156,7 @@
     <ClCompile Include="GameActor.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GamePawControllerkey3.cpp" />
     <ClCompile Include="GamePawn.cpp" />
     <ClCompile Include="GamePawnController.cpp" />
     <ClCompile Include="GamePawnControllerKey1.cpp" />
@@ -164,6 +166,9 @@
     <ClCompile Include="Moneda.cpp" />
     <ClCompile Include="MonedaClasico.cpp" />
     <ClCompile Include="MonedaGalactico.cpp" />
+    <ClCompile Include="MsPacman.cpp" />
+    <ClCompile Include="MsPAcmanClasico.cpp" />
+    <ClCompile Include="MsPacmanGalactico.cpp" />
     <ClCompile Include="Pacman.cpp" />
     <ClCompile Include="PacmanClasico.cpp" />
     <ClCompile Include="PacmanGalactico.cpp" />
@@ -194,6 +199,7 @@
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameObjectType.h" />
+    <ClInclude Include="GamePawControllerkey3.h" />
     <ClInclude Include="GamePawn.h" />
     <ClInclude Include="GamePawnController.h" />
     <ClInclude Include="GamePawnControllerKey1.h" />
@@ -203,6 +209,9 @@
     <ClInclude Include="MonedaClasico.h" />
     <ClInclude Include="MonedaGalactico.h" />
     <ClInclude Include="MoveDirection.h" />
+    <ClInclude Include="MsPacman.h" />
+    <ClInclude Include="MsPAcmanClasico.h" />
+    <ClInclude Include="MsPacmanGalactico.h" />
     <ClInclude Include="Pacman.h" />
     <ClInclude Include="PacmanClasico.h" />
     <ClInclude Include="PacmanGalactico.h" />
